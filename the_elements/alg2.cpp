@@ -1,4 +1,4 @@
-/* Algorithm 2: Aply for each.
+/* Algorithm 2: Transform
  *
  * Given a range, to aply a function to every element.
  *
@@ -13,7 +13,7 @@ template<class InputIterator, class Function>auto
 
 
 
-apply_for_each
+transform
 (InputIterator b, InputIterator e, Function fn) -> Function
 {
   while (b!=e) {
@@ -41,7 +41,7 @@ apply_for_each
 int main(){
     std::vector<int> v{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     auto times = [](int p)->int { return p << 1; };
-    apply_for_each <std::vector<int>::iterator, typeof(times)> (
+    transform <std::vector<int>::iterator, typeof(times)> (
         v.begin(),
         v.end(),
         times
