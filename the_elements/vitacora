@@ -1,0 +1,39 @@
+21.05.20
+I now start to write the STL algorithms as euclids propositions.
+
+After writting  Algorithm 1: Aply for each, the following concepts
+arise:
+    Given a transformation defined over a set of objects.
+    such objects are called points.
+    and the transformatio is called successor.
+    Then a range is a set of points R such that there is in R a point f
+    and it exist natural numbers i and n such that for every i, 0 < i <= n
+    successor(f)^i is in R. We call successor(f)^n l and say that the
+    range es defined by 2 of the following 3 things: f, l and n.
+    We say n is the size of the range.
+    f is the first element and l the last element.
+    A natural number i is an index for a range, if sucessor(b)^i
+    is definded.
+    successor(f)^i is said to be the ith element in the range.
+
+
+    Object is well defined in TC++PL: An object is a contiguous area
+    of memory to wich an interpretation as been assigned.
+
+    Value is a common notion wich is difficult to define.
+    One try: a value is that wich is can be tested for equality.
+    The equality of two values is a common notion.
+    Also its reflexivity, transitivity and symetry.
+
+    Function and object function are also defined in eop.
+
+    To assign a value to an object: change the values of the bits in
+    the object's area in such a way that the object's interpretation
+    of such area equals the given value.
+
+
+From algorithm 2: For each
+    we deffine an action as an algorithm with no return value.
+
+From algorithm 3: find
+    We need to define predicate, but eop does it for us.

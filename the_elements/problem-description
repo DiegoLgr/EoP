@@ -1,0 +1,18 @@
+    Enunciation:
+To find wether all elements in a secuence satifie a predicate P or not.
+Given a pair of fordward iterators b & e and a unary predicate p, to find if p
+holds for all elements in [b, e).
+
+    Definition:
+Let be the range [b, e) :: R and let be p(x) the unary predicate given:
+true => for all x in R p(x) else false
+
+    Procedure:
+template< class InputIt, class UnaryPredicate >
+constexpr bool all_of(InputIt first, InputIt last, UnaryPredicate p)
+{
+    return std::find_if_not(first, last, p) == last;
+}
+
+    Proof:
+// we need to know the invariant of find_if_not();
